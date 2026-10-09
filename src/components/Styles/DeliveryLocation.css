@@ -1,0 +1,31 @@
+/* DELIVERYLOCATION STYLES */
+.delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.delivery__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--chalk-dim);
+}
+
+.delivery__select {
+  width: 100%;
+  background: var(--board-bg);
+  border: 1.5px solid var(--line);
+  color: var(--chalk);
+  padding: 11px 12px;
+  border-radius: var(--radius-s);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.delivery__select:focus {
+  border-color: var(--mustard);
+}
+
+

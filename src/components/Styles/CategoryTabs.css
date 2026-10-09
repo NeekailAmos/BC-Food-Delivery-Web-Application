@@ -1,0 +1,67 @@
+/* CATEGORYTABS STYLES */
+.tabs {
+  padding-top: 72px;
+  background: var(--surface);
+  scroll-margin-top: 70px
+}
+
+.tabs__row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px
+}
+
+.tabs__heading h2 {
+  margin: 6px 0 0;
+  font: 800 clamp(27px, 4vw, 40px)/1.1 var(--font-display);
+  letter-spacing: -.035em
+}
+
+.tabs__buttons {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px
+}
+
+.tabs__item {
+  flex: none;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  transition: .18s ease
+}
+
+.tabs__item:hover {
+  border-color: var(--red);
+  color: var(--red)
+}
+
+.tabs__item--active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff
+}
+
+@media(max-width:720px) {
+  .tabs {
+    padding-top: 52px
+  }
+
+  .tabs__row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px
+  }
+
+  .tabs__buttons {
+    margin-inline: -4px
+  }
+}
+
+

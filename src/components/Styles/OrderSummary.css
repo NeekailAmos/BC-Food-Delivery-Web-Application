@@ -1,0 +1,24 @@
+/* ORDERSUMMARY STYLES */
+.summary {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 6px;
+}
+
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--chalk-dim);
+  padding-block: 3px;
+}
+
+.summary__row--total {
+  color: var(--chalk);
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+

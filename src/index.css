@@ -1,0 +1,95 @@
+/* INDEX STYLES */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+:root {
+  --red: #e32636;
+  --red-dark: #bd1424;
+  --red-soft: #fff0f1;
+  --ink: #17181c;
+  --muted: #686a72;
+  --paper: #fff;
+  --surface: #f7f7f8;
+  --line: #e9e9ec;
+  --success: #15875d;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Sans', sans-serif;
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --max-width: 1200px;
+  --board-bg: #fff;
+  --board-bg-raised: #fff;
+  --chalk: var(--ink);
+  --chalk-dim: var(--muted);
+  --mustard: var(--red);
+  --tomato: var(--red);
+  --paper-line: #d9d9dd;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased
+}
+
+#root {
+  min-height: 100vh
+}
+
+img {
+  max-width: 100%;
+  display: block
+}
+
+button,
+select {
+  font-family: inherit
+}
+
+button {
+  cursor: pointer
+}
+
+:focus-visible {
+  outline: 3px solid rgba(227, 38, 54, .28);
+  outline-offset: 3px
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase
+}
+
+@media(max-width:600px) {
+  .container {
+    width: min(100% - 28px, var(--max-width))
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important
+  }
+}

@@ -1,0 +1,72 @@
+/* FOOTER STYLES */
+.board-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 34px;
+  background: var(--ink);
+}
+
+.board-footer__inner p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #bdbec4;
+}
+
+.board-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.board-footer__brand span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--red);
+  font-weight: 800;
+}
+
+.board-footer__note {
+  margin-top: 4px !important;
+  font-family: var(--font-mono);
+  font-size: 11px !important;
+}
+
+.board-footer__inner {
+  text-align: center;
+}
+
+.board-footer__logo {
+  width: 170px;
+  max-height: 84px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+}
+
+.board-footer__name {
+  color: white !important;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+.board-footer__tagline {
+  margin-top: 6px !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+.footer-wired{
+  color: var(--red);
+  font-family: "Sacramento", cursive;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.board-footer__note {
+  margin-top: 18px !important;
+}
+
+

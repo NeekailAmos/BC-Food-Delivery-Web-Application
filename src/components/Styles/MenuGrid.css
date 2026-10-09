@@ -1,0 +1,40 @@
+/* MENUGRID STYLES */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding-block: 32px 85px
+}
+
+.menu-grid__empty {
+  color: var(--muted);
+  padding-block: 60px;
+  text-align: center
+}
+
+@media(max-width:900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media(max-width:560px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding-bottom: 60px
+  }
+}
+
+.menu-grid {
+  padding-top: 14px;
+}
+
+.menu-grid__count {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
