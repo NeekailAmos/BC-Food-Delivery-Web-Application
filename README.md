@@ -2,46 +2,38 @@
 
 **WFS361 Capstone Project | Belgium Campus iTversity | 2026**
 
-BC Food Delivery is a React website for the Belgium Campus tuck shop. It is inspired by food delivery services such as Mr D.
+BC Food Delivery is a responsive React frontend application created for the Belgium Campus tuck shop. It is inspired by food-delivery platforms such as Mr D.
 
-Students and staff can:
+The application allows students and staff to browse the tuck-shop menu, filter products by category, add products to a cart, select a Tshwane Campus delivery location and place a simulated order.
 
-- View the tuck-shop menu
-- Filter food by category
-- Add food to a cart
-- Choose a campus delivery location
-- Place a practice order
+This project is frontend only. It does not use a backend, database, user authentication or online payment system.
 
-This is a frontend project only. It does not have a database, login system, backend or real online payment.
+## Project purpose
 
-## Purpose of the project
-
-The Belgium Campus tuck shop can be busy. Students may need to wait in long queues.
-
-This project shows how students and staff could choose food and prepare an order before collecting it or receiving it on campus.
+The Belgium Campus tuck shop can become busy during peak times. This application demonstrates how students and staff could browse the menu and prepare a delivery order without standing in a long queue.
 
 ## Main features
 
-- View all menu items
-- Filter items by category
-- See food pictures, names, descriptions and prices
-- Add items to the cart
-- Increase or decrease quantities
-- Remove items from the cart
-- See the number of items in the cart
-- Calculate the total price automatically
-- Choose a Tshwane Campus delivery location
-- Add optional delivery instructions
+- Browse all available menu items
+- Filter food using menu categories
+- View product images, names, descriptions and prices
+- Add products to the cart
+- Increase or decrease product quantities
+- Remove products from the cart
+- View the live cart item count
+- Calculate the total order price automatically
+- Select a Tshwane Campus delivery location
+- Add optional room details or delivery instructions
 - Place a simulated order
 - View an order-confirmation ticket
 - Use Home, Menu and About navigation links
-- Use the website on desktop, tablet and mobile screens
+- Responsive layout for desktop, tablet and mobile screens
 
 ## Menu categories
 
-The menu information is stored in `src/data/menuData.js`.
+The menu data is stored in `src/data/menuData.js`.
 
-The categories are:
+The application includes:
 
 - Specials
 - Burgers
@@ -50,15 +42,13 @@ The categories are:
 - Chips and sides
 - Drinks
 
-The food and prices are based on the Belgium Campus tuck-shop menu.
+The menu items and prices are based on the Belgium Campus tuck-shop menu.
 
 ## Delivery locations
 
-Users can choose a delivery location on the Belgium Campus Tshwane Campus.
+Users can select delivery locations around the Belgium Campus Tshwane Campus, including:
 
-Locations include:
-
-- Residence Genk
+- Residence Genck
 - Residence Leuven
 - Residence Hasselt
 - Residence Antwerp
@@ -69,72 +59,72 @@ Locations include:
 - Administration Offices
 - Main Gate
 
-## Design
+## Design concept
 
-The website uses a clean Belgium Campus design.
+The website uses a clean and modern Belgium Campus-inspired design.
 
-It has a white background, dark text and red buttons. Each food card shows a picture, name, description, price and quantity controls.
+The interface uses a white background, charcoal text and red accent colours. Food products are displayed in professional cards containing an image, name, description, price and quantity controls.
 
-The header has the Belgium Campus logo, navigation links and a cart button. The cart opens from the side. After the user places an order, an order-confirmation ticket appears.
+The header contains the Belgium Campus iTversity logo, navigation links and a cart button with a live item count. The cart opens as a responsive side panel. After an order is placed, the application displays a simulated confirmation ticket.
 
-### Colours
+### Colour palette
 
-| Colour      | Code      | Use                            |
-| ----------- | --------- | ------------------------------ |
+| Colour | Hex value | Usage |
+|---|---|---|
 | Belgium red | `#E32636` | Buttons, prices and highlights |
-| Dark red    | `#BD1424` | Button hover colour            |
-| Charcoal    | `#17181C` | Main text and dark buttons     |
-| White       | `#FFFFFF` | Background and cards           |
-| Light grey  | `#F7F7F8` | Sections and inputs            |
-| Grey        | `#686A72` | Secondary text                 |
-| Green       | `#15875D` | Positive messages              |
+| Dark red | `#BD1424` | Button hover colour |
+| Charcoal | `#17181C` | Main text and dark buttons |
+| White | `#FFFFFF` | Main background and cards |
+| Light grey | `#F7F7F8` | Section and input backgrounds |
+| Grey | `#686A72` | Secondary text |
+| Green | `#15875D` | Positive status indicators |
 
-### Fonts
+### Typography
 
 - **Manrope** — headings
-- **DM Sans** — normal text
-- **Sacramento** — the “wired” footer text
+- **DM Sans** — body text
+- **Sacramento** — handwritten “wired” tagline style
 
 ## Technologies used
 
-- Figma — wireframes and designs
-- React 18 — website components
-- JavaScript — website logic
-- CSS — design and responsive layout
-- Vite 5 — runs and builds the project
-- GitHub — saves the code and commit history
-- Netlify — publishes the website online
+- Figma — wireframes and responsive visual designs
+- React 18 — component-based user interface
+- JavaScript — application logic
+- CSS — styling and responsive layouts
+- Vite 5 — development and production build
+- GitHub — version control
+- Netlify — website deployment
 
-The project does not use a CSS framework or UI library.
+No CSS framework or UI library is used.
 
-## React knowledge used
+## React concepts demonstrated
 
-This project uses:
+The project uses React concepts covered in WFS361:
 
 - Functional components
 - Props
 - `useState()`
 - Event handling
 - Conditional rendering
-- `map()` to display menu items
-- `filter()` to filter categories
-- `find()` to find products
-- `reduce()` to calculate totals
+- Dynamic rendering with `map()`
+- Category filtering with `filter()`
+- Product searching with `find()`
+- Total calculations with `reduce()`
 - Reusable components
-- Callback props to update state
+- State lifting through callback props
 
 The JavaScript and JSX use normal functions instead of arrow functions.
 
 ## State management
 
-The main state is stored in `App.jsx`:
+The main application state is stored in `App.jsx`:
 
-- `category` — selected menu category
-- `cart` — selected items and quantities
-- `cartOpen` — shows whether the cart is open
-- `location` — selected delivery location
-- `notes` — optional delivery instructions
-- `order` — confirmed simulated order
+- `category` — stores the selected menu category
+- `cart` — stores selected products and their quantities
+- `cartOpen` — controls whether the cart panel is open
+- `location` — stores the selected delivery location
+- `notes` — stores optional delivery instructions
+- `order` — stores the confirmed simulated order
 
 Example:
 
@@ -147,21 +137,23 @@ const [notes, setNotes] = useState("");
 const [order, setOrder] = useState(null);
 ```
 
-## Components
+## Component structure
 
-| Component              | Job                                        |
-| ---------------------- | ------------------------------------------ |
-| `Header.jsx`           | Shows the logo, navigation and cart button |
-| `Hero.jsx`             | Shows the main heading and menu button     |
-| `CategoryTabs.jsx`     | Shows the category buttons                 |
-| `MenuGrid.jsx`         | Displays the menu cards                    |
-| `MenuItemCard.jsx`     | Displays one menu item                     |
-| `CartSidebar.jsx`      | Shows the cart and checkout section        |
-| `CartItem.jsx`         | Shows one item inside the cart             |
-| `DeliveryLocation.jsx` | Lets the user choose a delivery location   |
-| `OrderSummary.jsx`     | Shows the item count and total price       |
-| `OrderTicket.jsx`      | Shows the order confirmation               |
-| `Footer.jsx`           | Shows Belgium Campus information           |
+Each component has one main responsibility:
+
+| Component | Responsibility |
+|---|---|
+| `Header.jsx` | Logo, navigation and cart button |
+| `Hero.jsx` | Main introduction and menu button |
+| `CategoryTabs.jsx` | Menu category buttons |
+| `MenuGrid.jsx` | Dynamically renders menu cards |
+| `MenuItemCard.jsx` | Displays one menu product |
+| `CartSidebar.jsx` | Cart and checkout panel |
+| `CartItem.jsx` | Displays one product in the cart |
+| `DeliveryLocation.jsx` | Campus delivery-location selector |
+| `OrderSummary.jsx` | Item count and total price |
+| `OrderTicket.jsx` | Simulated order confirmation |
+| `Footer.jsx` | Belgium Campus branding and project information |
 
 ## Project structure
 
@@ -208,15 +200,15 @@ bc-food-delivery/
             └── Footer.css
 ```
 
-## Run the project
+## Running the project locally
 
-### 1. Install the packages
+### 1. Install the dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Start the project
+### 2. Start the development server
 
 ```bash
 npm run dev
@@ -224,13 +216,13 @@ npm run dev
 
 ### 3. Open the local address
 
-Vite normally shows an address like:
+Vite normally displays an address similar to:
 
 ```text
 http://localhost:5173
 ```
 
-## Build the project
+## Building for production
 
 Run:
 
@@ -238,41 +230,45 @@ Run:
 npm run build
 ```
 
-Vite creates a `dist` folder for deployment.
+Vite creates a production-ready `dist` folder.
 
-To test the production build, run:
+To preview the production build locally, run:
 
 ```bash
 npm run preview
 ```
 
-## GitHub
+## GitHub version control
 
-Create a GitHub repository and commit your work regularly.
+Create a GitHub repository and make regular commits while developing the project.
 
-Example commit messages:
+Suggested commits:
 
 ```text
 Initial React project setup
 Add header and navigation
-Add menu data and components
+Add hero section
+Add dynamic menu data
+Create reusable menu components
 Add category filtering
-Add cart functionality
-Add delivery locations
-Add order confirmation
-Add responsive CSS
-Update README
+Add shopping cart functionality
+Add quantity controls
+Add order total calculation
+Add campus delivery locations
+Add checkout and order confirmation
+Add responsive styling
+Update README documentation
 Final testing and cleanup
 ```
 
 ## Netlify deployment
 
-1. Push the project to GitHub.
+1. Push the completed project to GitHub.
 2. Sign in to Netlify.
 3. Select **Add new site**.
 4. Select **Import an existing project**.
 5. Connect the GitHub repository.
-6. Use these settings:
+6. Use the following settings:
 
 ```text
 Build command: npm run build
@@ -280,63 +276,61 @@ Publish directory: dist
 ```
 
 7. Select **Deploy site**.
-8. Test the website on desktop and mobile.
+8. Test the live website on desktop and mobile.
 
-## Figma
+## Figma deliverable
 
-The Figma file should have wireframes and final designs.
+The Figma file should include both wireframes and final visual designs.
 
-Desktop screens:
+Recommended frames:
 
-- Home and Menu
-- Cart and Checkout
-- Order Confirmation
-
-Mobile screens:
+### Desktop
 
 - Home and Menu
 - Cart and Checkout
 - Order Confirmation
 
-The Figma design should look similar to the React website.
+### Mobile
 
-## Rubric evidence
+- Home and Menu
+- Cart and Checkout
+- Order Confirmation
 
-| Rubric section         | Evidence                                          |
-| ---------------------- | ------------------------------------------------- |
-| Component Structure    | Small reusable components                         |
-| Props and State        | State stored in `App.jsx` and passed using props  |
-| Dynamic Data           | Menu items loaded from `menuData.js`              |
-| Cart and Interactivity | Add, decrease, remove and total functions         |
-| User Experience        | Navigation, filters and clear messages            |
-| Code Quality           | Clear names, normal functions and organised files |
-| Responsive Design      | Desktop, tablet and mobile CSS                    |
-| Appearance             | Consistent Belgium Campus design                  |
-| GitHub                 | Regular commits                                   |
-| Netlify                | Production website deployment                     |
-| Figma                  | Responsive wireframes and final designs           |
+The Figma colours, fonts, spacing and component layouts should match the React website.
+
+## WFS361 rubric coverage
+
+| Rubric section | Evidence in this project |
+|---|---|
+| Component Structure | Reusable components with separate responsibilities |
+| Props and State Management | Central state in `App.jsx`, passed through props |
+| Dynamic Data Rendering | Menu items rendered from `menuData.js` |
+| Cart and Interactivity | Add, decrease, delete and live total functionality |
+| User Experience | Navigation, category filters, empty states and disabled states |
+| Code Quality | Clear names, normal functions and organised folders |
+| Responsive Behaviour | Desktop, tablet and mobile media queries |
+| Professional Appearance | Consistent Belgium Campus-inspired design |
+| GitHub Usage | Regular commits required during development |
+| Netlify Deployment | Production build ready for Netlify |
+| Figma Design | Separate responsive Figma deliverable required |
 
 ## Project limitations
 
-This project does not include:
+The following features are intentionally excluded because the assessment requires a frontend-only simulation:
 
-- User login or registration
+- User login and registration
 - Online payments
-- A backend database
-- A real ordering API
-- Live order tracking
+- Backend database
+- External ordering API
+- Real-time order tracking
 - Real order processing
 
-These features are not required because this is a frontend simulation.
+## Project links
 
-## Submission links
-
-Replace the text below before submitting:
-
-- **Figma:** Add your Figma link
-- **GitHub:** Add your GitHub repository link
-- **Live website:** Add your Netlify link
-- **Video walkthrough:** Add your video filename or link
+- **Figma design:** [View the editable Figma design](https://www.figma.com/design/Ih7XA3yFAAnxIWfy0Dp9jX/BC-Food-Delivery-%E2%80%94-WFS361-Figma-Design?node-id=0-1)
+- **Published Figma website:** [View the Figma website](https://dial-anchor-67011980.figma.site)
+- **GitHub repository:** [View the source code on GitHub](https://github.com/NeekailAmos/BC-Food-Delivery-Web-Application)
+- **Published Netlify website:** [Open the live application](https://bc-food-delivery.netlify.app/)
 
 ## Author
 
@@ -348,4 +342,5 @@ WFS361 — Web Frontend Scripting 361
 
 ## Disclaimer
 
-This is a student frontend project. All orders are simulated. No real payments, deliveries or customer information are processed.
+This application is a student frontend project. All orders are simulated. No real payments, deliveries or customer information are processed.
+
